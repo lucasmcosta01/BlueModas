@@ -42,6 +42,7 @@ textarea {
     background-image: none;
     margin-top: 100px;
     margin-bottom: 100px;
+    color: black;
 }
 
 .navbar-brand {
@@ -87,6 +88,13 @@ textarea {
 }
 
 h3{
-   color: black;
+   color: white;
 }
 
+.container body-content{
+    color: white;
+}
+
+footer{
+    color: white;
+}

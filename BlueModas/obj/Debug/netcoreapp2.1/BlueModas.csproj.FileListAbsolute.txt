@@ -34,3 +34,4 @@ C:\Users\lukas\Desktop\BlueModas\BlueModas\obj\Debug\netcoreapp2.1\Razor\Views\P
 C:\Users\lukas\Desktop\BlueModas\BlueModas\obj\Debug\netcoreapp2.1\Razor\Views\Pedido\Carrinho.cshtml.g.cs
 C:\Users\lukas\Desktop\BlueModas\BlueModas\obj\Debug\netcoreapp2.1\Razor\Views\Pedido\Carrossel.cshtml.g.cs
 C:\Users\lukas\Desktop\BlueModas\BlueModas\obj\Debug\netcoreapp2.1\Razor\Views\Pedido\Resumo.cshtml.g.cs
+C:\Users\lukas\Desktop\BlueModas\BlueModas\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
