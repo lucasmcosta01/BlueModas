@@ -17,7 +17,7 @@ namespace BlueModas
 
         public void InicializaDB()
         {
-            contexto.Database.Migrate();
+            contexto.Database.EnsureCreated();
         }
     }
 }

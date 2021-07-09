@@ -61,7 +61,7 @@ namespace BlueModas
                     template: "{controller=Pedido}/{action=Carrossel}/{id?}");
             });
 
-            serviceProvider.GetService<DataService>().InicializaDB();
+            serviceProvider.GetService<IDataService>().InicializaDB();
         }
     }
 }
