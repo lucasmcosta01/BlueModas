@@ -1,8 +1,12 @@
 ﻿using BlueModas.Repositories;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BlueModas
@@ -25,11 +29,12 @@ namespace BlueModas
 
             List<Roupa> roupas = await GetRoupas();
 
-            produtoRepository.SaveProdutos(roupas);
+            await produtoRepository.SaveProdutos(roupas);
         }
 
         private static async Task<List<Roupa>> GetRoupas()
         {
+           
             var json = await File.ReadAllTextAsync("Roupas.json");
             var roupas = JsonConvert.DeserializeObject<List<Roupa>>(json);
             return roupas;
