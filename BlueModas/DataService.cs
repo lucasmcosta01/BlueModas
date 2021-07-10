@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace BlueModas
 {
@@ -18,18 +19,18 @@ namespace BlueModas
             this.produtoRepository = produtoRepository;
         }
 
-        public void InicializaDB()
+        public async Task InicializaDB()
         {
-            contexto.Database.Migrate();
+            await contexto.Database.MigrateAsync();
 
-            List<Roupa> roupas = GetRoupas();
+            List<Roupa> roupas = await GetRoupas();
 
             produtoRepository.SaveProdutos(roupas);
         }
 
-        private static List<Roupa> GetRoupas()
+        private static async Task<List<Roupa>> GetRoupas()
         {
-            var json = File.ReadAllText("Roupas.json");
+            var json = await File.ReadAllTextAsync("Roupas.json");
             var roupas = JsonConvert.DeserializeObject<List<Roupa>>(json);
             return roupas;
         }

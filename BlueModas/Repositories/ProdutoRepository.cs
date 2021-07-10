@@ -2,31 +2,38 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BlueModas.Repositories
 {
+
+    public interface IProdutoRepository
+    {
+        Task SaveProdutos(List<Roupa> roupas);
+        Task<IList<Produto>> GetProdutos();
+    }
+
     public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
-
         public ProdutoRepository(ApplicationContext contexto) : base(contexto)
         {
         }
 
-        public IList<Produto> GetProdutos()
+        public async Task<IList<Produto>> GetProdutos()
         {
-            return dbSet.ToList();
+            return await dbSet.ToListAsync();
         }
 
-        public void SaveProdutos(List<Roupa> roupas)
+        public async Task SaveProdutos(List<Roupa> roupas)
         {
             foreach (var roupa in roupas)
             {
-                if (!dbSet.Where(p => p.Codigo == roupa.Codigo).Any())
+                if (!await dbSet.Where(p => p.Codigo == roupa.Codigo).AnyAsync())
                 {
-                    dbSet.Add(new Produto(roupa.Codigo, roupa.Nome, roupa.Preco));
+                    await dbSet.AddAsync(new Produto(roupa.Codigo, roupa.Nome, roupa.Preco));
                 }
             }
-            contexto.SaveChanges();
+            await contexto.SaveChangesAsync();
         }
     }
 

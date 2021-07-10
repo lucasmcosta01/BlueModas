@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace BlueModas.Models
 {
     [DataContract]
-    public class BaseModel
+    public abstract class BaseModel
     {
         [DataMember]
-        public int Id { get;  set; }
+        public int Id { get; protected set; }
     }
 }

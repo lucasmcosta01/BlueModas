@@ -1,7 +1,9 @@
-﻿namespace BlueModas
+﻿using System.Threading.Tasks;
+
+namespace BlueModas
 {
     interface IDataService
     {
-        void InicializaDB();
+        Task InicializaDB();
     }
 }
