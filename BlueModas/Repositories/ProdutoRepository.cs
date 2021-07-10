@@ -1,28 +1,30 @@
 ﻿using BlueModas.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace BlueModas.Repositories
 {
-    public class ProdutoRepository : IProdutoRepository
+    public class ProdutoRepository : BaseRepository<Produto>, IProdutoRepository
     {
-        private readonly ApplicationContext contexto;
 
-        public ProdutoRepository(ApplicationContext contexto)
+        public ProdutoRepository(ApplicationContext contexto) : base(contexto)
         {
-            this.contexto = contexto;
         }
 
         public IList<Produto> GetProdutos()
         {
-            return contexto.Set<Produto>().ToList();
+            return dbSet.ToList();
         }
 
         public void SaveProdutos(List<Roupa> roupas)
         {
             foreach (var roupa in roupas)
             {
-                contexto.Set<Produto>().Add(new Produto(roupa.Codigo, roupa.Nome, roupa.Preco));
+                if (!dbSet.Where(p => p.Codigo == roupa.Codigo).Any())
+                {
+                    dbSet.Add(new Produto(roupa.Codigo, roupa.Nome, roupa.Preco));
+                }
             }
             contexto.SaveChanges();
         }
