@@ -13,16 +13,16 @@ namespace BlueModas.Repositories
             this.contexto = contexto;
         }
 
-        public IList<ProdutoFeminino> GetProdutos()
+        public IList<Produto> GetProdutos()
         {
-            return contexto.Set<ProdutoFeminino>().ToList();
+            return contexto.Set<Produto>().ToList();
         }
 
         public void SaveProdutos(List<Roupa> roupas)
         {
             foreach (var roupa in roupas)
             {
-                contexto.Set<ProdutoFeminino>().Add(new ProdutoFeminino(roupa.Codigo, roupa.Nome, roupa.Preco));
+                contexto.Set<Produto>().Add(new Produto(roupa.Codigo, roupa.Nome, roupa.Preco));
             }
             contexto.SaveChanges();
         }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BlueModas.Models
 {
-    public class ProdutoMasculino : BaseModel
+    public class Produto : BaseModel
     {
-        public ProdutoMasculino()
+        public Produto()
         {
 
         }
@@ -20,12 +20,11 @@ namespace BlueModas.Models
         [Required]
         public decimal Preco { get; private set; }
 
-        public ProdutoMasculino(string codigo, string nome, decimal preco)
+        public Produto(string codigo, string nome, decimal preco)
         {
             this.Codigo = codigo;
             this.Nome = nome;
             this.Preco = preco;
         }
-
     }
 }

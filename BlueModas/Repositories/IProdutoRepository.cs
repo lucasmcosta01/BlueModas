@@ -6,6 +6,6 @@ namespace BlueModas.Repositories
     public interface IProdutoRepository
     {
         void SaveProdutos(List<Roupa> roupas);
-        IList<ProdutoFeminino> GetProdutos();
+        IList<Produto> GetProdutos();
     }
 }

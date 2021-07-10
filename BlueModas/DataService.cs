@@ -22,9 +22,9 @@ namespace BlueModas
         {
             contexto.Database.Migrate();
 
-            List<Roupa> livros = GetRoupas();
+            List<Roupa> roupas = GetRoupas();
 
-            produtoRepository.SaveProdutos(livros);
+            produtoRepository.SaveProdutos(roupas);
         }
 
         private static List<Roupa> GetRoupas()
