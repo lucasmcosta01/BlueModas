@@ -33,6 +33,5 @@ namespace BlueModas.Models
         public string CEP { get; set; } = "";
 
         public int PedidoForeignKey { get; set; }
-        public Pedido pedido { get; set; }
     }
 }

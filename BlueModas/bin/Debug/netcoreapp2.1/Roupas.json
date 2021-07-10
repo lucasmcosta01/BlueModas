@@ -1,0 +1,367 @@
+[
+  {
+    "Codigo": "001",
+    "Nome": "Blusa Cropped",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "002",
+    "Nome": "Blusa Feminina Azul",
+    "Preco": 29.90
+  },
+  {
+    "Codigo": "003",
+    "Nome": "Blusa Feminina Briard Ferrugem",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "004",
+    "Nome": "Blusa Feminina Canelada",
+    "Preco": 29.90
+  },
+  {
+    "Codigo": "005",
+    "Nome": "Blusa Feminina Luktal Amarelo",
+    "Preco": 19.90
+  },
+  {
+    "Codigo": "006",
+    "Nome": "Blusa Feminina Luktal Azul",
+    "Preco": 19.90
+  },
+  {
+    "Codigo": "007",
+    "Nome": "Blusa Feminina Plus Luktal",
+    "Preco": 49.90
+  },
+  {
+    "Codigo": "008",
+    "Nome": "Blusa Feminina Plus Naif",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "009",
+    "Nome": "Blusa Real Ly Dont",
+    "Preco": 29.90
+  },
+  {
+    "Codigo": "010",
+    "Nome": "Blusa Visco Choker",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "011",
+    "Nome": "Calça Flare Jeans",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "012",
+    "Nome": "Calça Jeans Cigarrete",
+    "Preco": 99.90
+  },
+  {
+    "Codigo": "013",
+    "Nome": "Calça Jeans Stretch",
+    "Preco": 109.90
+  },
+  {
+    "Codigo": "014",
+    "Nome": "Calça Feminina BioTipo",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "015",
+    "Nome": "Calça Feminina BioTipo AZ",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "016",
+    "Nome": "Calça Feminina BioTipo Azul",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "017",
+    "Nome": "Calça Feminina Kysh",
+    "Preco": 99.90
+  },
+  {
+    "Codigo": "018",
+    "Nome": "Calça Feminina",
+    "Preco": 119.90
+  },
+  {
+    "Codigo": "019",
+    "Nome": "Calça Feminina Bio",
+    "Preco": 99.90
+  },
+  {
+    "Codigo": "020",
+    "Nome": "Calça Feminina Reta",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "021",
+    "Nome": "Macaquinho Danyblu",
+    "Preco": 99.90
+  },
+  {
+    "Codigo": "022",
+    "Nome": "Macaquinho Lurex",
+    "Preco": 109.90
+  },
+  {
+    "Codigo": "023",
+    "Nome": "Macaquinho Sem Mangas",
+    "Preco": 139.90
+  },
+  {
+    "Codigo": "024",
+    "Nome": "Macaquinho Cambos",
+    "Preco": 99.90
+  },
+  {
+    "Codigo": "025",
+    "Nome": "Vestido Canelado",
+    "Preco": 150.90
+  },
+  {
+    "Codigo": "026",
+    "Nome": "Vestido Chopp Musgo",
+    "Preco": 109.90
+  },
+  {
+    "Codigo": "027",
+    "Nome": "Vestido Gola Alta",
+    "Preco": 129.90
+  },
+  {
+    "Codigo": "028",
+    "Nome": "Vestido Marinho",
+    "Preco": 139.90
+  },
+  {
+    "Codigo": "029",
+    "Nome": "Vestido Longo Plus",
+    "Preco": 159.90
+  },
+  {
+    "Codigo": "030",
+    "Nome": "Vestido Militar",
+    "Preco": 119.90
+  },
+  {
+    "Codigo": "031",
+    "Nome": "Short Doct",
+    "Preco": 69.90
+  },
+  {
+    "Codigo": "032",
+    "Nome": "Short Epos",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "033",
+    "Nome": "Short Uber",
+    "Preco": 49.90
+  },
+  {
+    "Codigo": "034",
+    "Nome": "Short Barra Desfiada",
+    "Preco": 59.90
+  },
+  {
+    "Codigo": "035",
+    "Nome": "Short Gode Cintura Alta",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "036",
+    "Nome": "Short Black Curto",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "037",
+    "Nome": "Short Clochard",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "038",
+    "Nome": "Short Jeans Gode",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "039",
+    "Nome": "Short Mass Coral",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "040",
+    "Nome": "Short Jeans Sky",
+    "Preco": 69.90
+  },
+  {
+    "Codigo": "041",
+    "Nome": "Camiseta Varp Lapim",
+    "Preco": 49.90
+  },
+  {
+    "Codigo": "042",
+    "Nome": "Camiseta Rock Soda",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "043",
+    "Nome": "Camiseta Ziper",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "044",
+    "Nome": "Camiseta Chumbo",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "045",
+    "Nome": "Camiseta Azul Marinho",
+    "Preco": 49.90
+  },
+  {
+    "Codigo": "046",
+    "Nome": "Camiseta Preto Nico",
+    "Preco": 59.90
+  },
+  {
+    "Codigo": "047",
+    "Nome": "Camiseta Basica",
+    "Preco": 29.90
+  },
+  {
+    "Codigo": "048",
+    "Nome": "Camisa Meia Malha",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "049",
+    "Nome": "Jaqueta Xadrez Capuz Nicoboco",
+    "Preco": 129.90
+  },
+  {
+    "Codigo": "050",
+    "Nome": "Regata Machao",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "051",
+    "Nome": "Bermuda Jeans Puidos",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "052",
+    "Nome": "Bermuda Corrida Elastico",
+    "Preco": 49.90
+  },
+  {
+    "Codigo": "053",
+    "Nome": "Bermuda Skinny Floral",
+    "Preco": 59.90
+  },
+  {
+    "Codigo": "054",
+    "Nome": "Bermuda Skinny",
+    "Preco": 45.90
+  },
+  {
+    "Codigo": "055",
+    "Nome": "Bermuda Jeans Bolsos",
+    "Preco": 79.90
+  },
+  {
+    "Codigo": "056",
+    "Nome": "Bermuda Moletom",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "057",
+    "Nome": "Bermuda Moletom Banana",
+    "Preco": 59.90
+  },
+  {
+    "Codigo": "058",
+    "Nome": "Bermuda Skinny Rock",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "059",
+    "Nome": "Bermuda Surf",
+    "Preco": 39.90
+  },
+  {
+    "Codigo": "060",
+    "Nome": "Bermuda Jeans",
+    "Preco": 49.90
+  },
+  {
+    "Codigo": "061",
+    "Nome": "Calça Masculina Jeans",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "062",
+    "Nome": "Calça Jeans Rock",
+    "Preco": 99.90
+  },
+  {
+    "Codigo": "063",
+    "Nome": "Calça Jeans Reta",
+    "Preco": 69.90
+  },
+  {
+    "Codigo": "064",
+    "Nome": "Calça Jogger Moletom",
+    "Preco": 109.90
+  },
+  {
+    "Codigo": "065",
+    "Nome": "Calça Jogger Jet",
+    "Preco": 119.90
+  },
+  {
+    "Codigo": "065",
+    "Nome": "Calça Jogger Jet",
+    "Preco": 119.90
+  },
+  {
+    "Codigo": "066",
+    "Nome": "Calça Reta Bolsos",
+    "Preco": 139.90
+  },
+  {
+    "Codigo": "067",
+    "Nome": "Calça Jeans Slim",
+    "Preco": 89.90
+  },
+  {
+    "Codigo": "068",
+    "Nome": "Calça JSarja Skinny",
+    "Preco": 149.90
+  },
+  {
+    "Codigo": "069",
+    "Nome": "Calça Moletom Jogger",
+    "Preco": 109.90
+  },
+  {
+    "Codigo": "070",
+    "Nome": "Calça Sarja Bordo",
+    "Preco": 119.90
+  },
+  {
+    "Codigo": "071",
+    "Nome": "Colete Masculino Puffer Rock",
+    "Preco": 125.90
+  },
+  {
+    "Codigo": "072",
+    "Nome": "Blazer Masculino",
+    "Preco": 159.90
+  }
+]

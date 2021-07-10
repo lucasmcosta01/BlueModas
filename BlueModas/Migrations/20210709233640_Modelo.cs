@@ -20,6 +20,21 @@ namespace BlueModas.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Produto",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Codigo = table.Column<string>(nullable: false),
+                    Nome = table.Column<string>(nullable: false),
+                    Preco = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Produto", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Cadastro",
                 columns: table => new
                 {
@@ -34,8 +49,7 @@ namespace BlueModas.Migrations
                     Municipio = table.Column<string>(nullable: false),
                     UF = table.Column<string>(nullable: false),
                     CEP = table.Column<string>(nullable: false),
-                    PedidoForeignKey = table.Column<int>(nullable: false),
-                    pedidoId = table.Column<int>(nullable: true)
+                    PedidoForeignKey = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -46,12 +60,6 @@ namespace BlueModas.Migrations
                         principalTable: "Pedido",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Cadastro_Pedido_pedidoId",
-                        column: x => x.pedidoId,
-                        principalTable: "Pedido",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -89,11 +97,6 @@ namespace BlueModas.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cadastro_pedidoId",
-                table: "Cadastro",
-                column: "pedidoId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ItemPedido_PedidoId",
                 table: "ItemPedido",
                 column: "PedidoId");
@@ -114,6 +117,9 @@ namespace BlueModas.Migrations
 
             migrationBuilder.DropTable(
                 name: "Pedido");
+
+            migrationBuilder.DropTable(
+                name: "Produto");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BlueModas.Repositories;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,26 +10,32 @@ namespace BlueModas.Controllers
 {
     public class PedidoController : Controller
     {
-        public ActionResult Carrossel()
+        private readonly IProdutoRepository produtoRepository;
+
+        public PedidoController(IProdutoRepository produtoRepository)
+        {
+            this.produtoRepository = produtoRepository;
+        }
+
+        public IActionResult Carrossel()
+        {
+            return View(produtoRepository.GetProdutos());
+        }
+
+        public IActionResult Carrinho()
         {
             return View();
         }
 
-        public ActionResult Carrinho(int id)
+        public IActionResult Cadastro()
         {
             return View();
         }
 
-        public ActionResult Cadastro()
+        public IActionResult Resumo()
         {
             return View();
         }
-
-        public ActionResult Resumo()
-        {
-            return View();
-        }
-
 
     }
 }

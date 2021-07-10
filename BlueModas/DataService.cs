@@ -1,23 +1,37 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using BlueModas.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace BlueModas
 {
     class DataService : IDataService
     {
         private readonly ApplicationContext contexto;
+        private readonly IProdutoRepository produtoRepository;
 
-        public DataService(ApplicationContext contexto)
+        public DataService(ApplicationContext contexto,
+                    IProdutoRepository produtoRepository)
         {
             this.contexto = contexto;
+            this.produtoRepository = produtoRepository;
         }
 
         public void InicializaDB()
         {
-            contexto.Database.EnsureCreated();
+            contexto.Database.Migrate();
+
+            List<Roupa> livros = GetRoupas();
+
+            produtoRepository.SaveProdutos(livros);
+        }
+
+        private static List<Roupa> GetRoupas()
+        {
+            var json = File.ReadAllText("Roupas.json");
+            var roupas = JsonConvert.DeserializeObject<List<Roupa>>(json);
+            return roupas;
         }
     }
 }

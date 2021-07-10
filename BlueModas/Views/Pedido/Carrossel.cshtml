@@ -1,4 +1,5 @@
-﻿
+﻿@model List<ProdutoFeminino>;
+
 <h3>Moda Feminina</h3>
 
 
@@ -8,131 +9,45 @@
 <div id="my-carousel" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/BLUSA-FEM-LUKTAL-AML.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina Luktal</div>
-                            <div><h4><strong>R$ 49,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/Blusa-Cropped-Feminina-Botoes-Manga.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Cropped Feminina Botoes Manga</div>
-                            <div><h4><strong>R$ 39,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/BLUSA-FEM-BRIARD-FERRUGEM.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina Briard Ferrugem</div>
-                            <div><h4><strong>R$ 45,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/Blusa-Feminina-Canelada-Bicolor-Manga-Curta.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina Canelada Bicolor Manga Curta</div>
-                            <div><h4><strong>R$ 39,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+        @{ const int TAMANHO_PAGINA = 4;
 
-        </div>
-        <div class="item ">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/BLUSA-FEM-LUKTAL-AZL.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina Luktal Azul</div>
-                            <div><h4><strong>R$ 29,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/BLUSA-FEM.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina</div>
-                            <div><h4><strong>R$ 29,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/BLUSA-FEM-PLUS-LUKTAL-PTO.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina Plus Luktal</div>
-                            <div><h4><strong>R$ 49,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/BLUSA-FEM-PLUS-NAIF-PTO.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Blusa Feminina Plus</div>
-                            <div><h4><strong>R$ 39,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            int paginas = (int)Math.Ceiling((double)Model.Count() / TAMANHO_PAGINA); }
 
+        @for (int pagina = 0; pagina < paginas; pagina++)
+        {
 
-        </div>
+            <div class="item @(pagina == 0 ? "active" : "")">
+                <div class="row">
+
+                    @{ var produtosDaPagina = Model.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
+
+                    @foreach (var produto in produtosDaPagina)
+                    {
+                        
+                        
+                            <div class="col-md-3 col-sm-3 col-lg-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <img class="img-produto-carrossel" src="/images/produtos/large_@(produto.Codigo).jpg" />
+                                    </div>
+                                    <div class="panel-footer produto-footer">
+                                        <div class="produto-nome">@produto.Nome</div>
+                                        <div><h4><strong>R$ @produto.Preco</strong></h4></div>
+                                        <div class="text-center">
+                                            <a href="/" class="btn btn-success">Adicionar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         
+
+                     }
+                </div>
+             </div>
+        }
     </div>
+
 
     <!-- Controls -->
     <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
@@ -150,131 +65,41 @@
 <div id="my-carousel1" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/CAMISETA-C-DETALHE-ZIPER-MASC.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Camiseta Masculina Ziper</div>
-                            <div><h4><strong>R$ 39,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
+
+        @for (int pagina = 0; pagina < paginas; pagina++)
+        {
+
+            <div class="item @(pagina == 0 ? "active" : "")">
+                <div class="row">
+
+                    @{ var produtosDaPagina = Model.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
+
+                    @foreach (var produto in produtosDaPagina)
+                    {
+                        
+                        
+                            <div class="col-md-3 col-sm-3 col-lg-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <img class="img-produto-carrossel" src="/images/produtos/large_@(produto.Codigo).jpg" />
+                                    </div>
+                                    <div class="panel-footer produto-footer">
+                                        <div class="produto-nome">@produto.Nome</div>
+                                        <div><h4><strong>R$ @produto.Preco</strong></h4></div>
+                                        <div class="text-center">
+                                            <a href="/" class="btn btn-success">Adicionar</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/CAMISETA-MASC-CHUMBO-ZUJS.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Camiseta Masculina Chumbo</div>
-                            <div><h4><strong>R$ 29,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/CAMISETA-MASC-ML-AZUL-MARINHO.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Camiseta Masculina Azul Marinho</div>
-                            <div><h4><strong>R$ 49,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/CAMISETA-MASC-PRETO-NICO.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Camiseta Masculina Preto Nico</div>
-                            <div><h4><strong>R$ 39,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
+                        
+
+                    }
                 </div>
             </div>
-
-
-        </div>
-        <div class="item ">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/Camiseta-Masculina-Basica-Manga-Curta-Rock-Soda.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Camiseta Masculina Basica</div>
-                            <div><h4><strong>R$ 19,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/CAMISETA-MC-MEIA-MALHA-ESTAMPA.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Camiseta Malha</div>
-                            <div><h4><strong>R$ 59,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/Jaqueta-Masculina-Xadrez-Capuz-Recorte-Nicoboco.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Jaqueta Masculina Xadrez Capuz Recorte Nicoboco</div>
-                            <div><h4><strong>R$ 89,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/REGATA-MACHAO-MASC-SCZ-ODY.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Regata Machao Masculina</div>
-                            <div><h4><strong>R$ 29,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
+        }
     </div>
+
 
     <!-- Controls -->
     <a class="left carousel-control" href="#my-carousel1" role="button" data-slide="prev">
