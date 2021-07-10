@@ -38,7 +38,6 @@ C:\Users\lukas\Desktop\BlueModas\BlueModas\obj\Debug\netcoreapp2.1\UserSecretsAs
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\bundleconfig.json
-C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\Roupas.json
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\BlueModas.deps.json
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\BlueModas.runtimeconfig.json
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\BlueModas.runtimeconfig.dev.json
@@ -52,3 +51,4 @@ C:\Users\lukas\Desktop\ProjetoJet\BlueModas\obj\Debug\netcoreapp2.1\UserSecretsA
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\obj\Debug\netcoreapp2.1\BlueModas.dll
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\obj\Debug\netcoreapp2.1\BlueModas.pdb
 C:\Users\lukas\Desktop\ProjetoJet\BlueModas\obj\Debug\netcoreapp2.1\BlueModas.genruntimeconfig.cache
+C:\Users\lukas\Desktop\ProjetoJet\BlueModas\bin\Debug\netcoreapp2.1\Roupas.json

@@ -1,15 +1,22 @@
 ﻿@model List<Produto>;
 
-@{ List<Produto> parts = new List<Produto>();
-    for (int i = 0; i < 40; i++)
+@{ List<Produto> produto2 = new List<Produto>();
+    foreach (var P in Model)
     {
-        parts.Add(Model[i]);
+        if (int.Parse(P.Codigo) >= 1 && int.Parse(P.Codigo) <= 40)
+        {
+            produto2.Add(P);
+        }
     }
 }
-@{ List<Produto> parts1 = new List<Produto>();
-    for (int i = 40; i < 72; i++)
+}
+@{ List<Produto> produto1 = new List<Produto>();
+    foreach (var P in Model)
     {
-        parts.Add(Model[i]);
+        if (int.Parse(P.Codigo) >= 41 && int.Parse(P.Codigo) <= 72)
+        {
+            produto1.Add(P);
+        }
     }
 }
 
@@ -27,7 +34,7 @@
 
         @{ const int TAMANHO_PAGINA = 4;
 
-            int paginas = (int)Math.Ceiling((double)parts.Count() / TAMANHO_PAGINA); }
+            int paginas = (int)Math.Ceiling((double)produto2.Count() / TAMANHO_PAGINA); }
 
         @for (int pagina = 0; pagina < paginas; pagina++)
         {
@@ -35,7 +42,7 @@
             <div class="item @(pagina == 0 ? "active" : "")">
                 <div class="row">
 
-                    @{ var produtosDaPagina = parts.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
+                    @{ var produtosDaPagina = produto2.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
 
                     @foreach (var produto in produtosDaPagina)
                     {
@@ -60,7 +67,7 @@
                     }
                 </div>
             </div>
-                        }
+        }
     </div>
 
 
@@ -83,7 +90,7 @@
 
         @{
 
-            paginas = (int)Math.Ceiling((double)Model.Count() / TAMANHO_PAGINA); }
+            paginas = (int)Math.Ceiling((double)produto1.Count() / TAMANHO_PAGINA); }
 
         @for (int pagina = 0; pagina < paginas; pagina++)
         {
@@ -91,20 +98,20 @@
             <div class="item @(pagina == 0 ? "active" : "")">
                 <div class="row">
 
-                    @{ var produtosDaPagina = Model.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
+                    @{ var produtosDaPagina = produto1.Skip(pagina * TAMANHO_PAGINA).Take(TAMANHO_PAGINA); }
 
-                    @foreach (var produto in produtosDaPagina)
+                    @foreach (var produto3 in produtosDaPagina)
                     {
 
 
                         <div class="col-md-3 col-sm-3 col-lg-3">
-                            <div class="panel panel-default"> 
+                            <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <img class="img-produto-carrossel" src="/images/produtos/large_@(produto.Codigo).jpg" />
+                                    <img class="img-produto-carrossel" src="/images/produtos/large_@(produto3.Codigo).jpg" />
                                 </div>
                                 <div class="panel-footer produto-footer">
-                                    <div class="produto-nome">@produto.Nome</div>
-                                    <div><h4><strong>R$ @produto.Preco</strong></h4></div>
+                                    <div class="produto-nome">@produto3.Nome</div>
+                                    <div><h4><strong>R$ @produto3.Preco</strong></h4></div>
                                     <div class="text-center">
                                         <a href="/" class="btn btn-success">Adicionar</a>
                                     </div>
@@ -118,7 +125,7 @@
             </div>
         }
     </div>
-                        
+
     <!-- Controls -->
     <a class="left carousel-control" href="#my-carousel1" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
