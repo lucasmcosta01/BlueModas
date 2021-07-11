@@ -1,13 +1,7 @@
 
-
-
 @{
     ViewData["Title"] = "Home";
 }
-
-
-
-
 
 @model List<Produto>;
 
@@ -30,6 +24,7 @@
         }
     }
 }
+
 
 
 
@@ -65,11 +60,10 @@
                                 <div class="panel-footer produto-footer">
                                     <div class="produto-nome">@produto.Nome</div>
                                     <div><h4><strong>R$ @produto.Preco</strong></h4></div>
-                                    <div class="text-capitalize">
+                                    <div class="text-center">
                                         <a asp-action="carrinho"
                                            asp-route-codigo="@produto.Codigo"
                                            class="btn btn-success">Comprar</a>
-
                                     </div>
                                 </div>
                             </div>
@@ -124,10 +118,12 @@
                                 <div class="panel-footer produto-footer">
                                     <div class="produto-nome">@produto3.Nome</div>
                                     <div><h4><strong>R$ @produto3.Preco</strong></h4></div>
-                                    <div class="text-capitalize">
+                                    <div class="text-center">
                                         <a asp-action="carrinho"
                                            asp-route-codigo="@produto3.Codigo"
                                            class="btn btn-success">Comprar</a>
+
+
                                     </div>
 
                                 </div>
@@ -151,3 +147,4 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+

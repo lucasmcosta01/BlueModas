@@ -1,11 +1,8 @@
 ﻿using BlueModas.Models;
 using BlueModas.Models.ViewModels;
 using BlueModas.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BlueModas.Controllers
@@ -42,6 +39,8 @@ namespace BlueModas.Controllers
             CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens);
             return base.View(carrinhoViewModel);
         }
+
+       
 
         public async Task<IActionResult> Cadastro()
         {

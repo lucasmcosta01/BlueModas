@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background: linear-gradient(black 10%, white 80%, #000000 100%);
+    background-image: url("../images/logo001.png");
 }
 
 /* Wrapping element */

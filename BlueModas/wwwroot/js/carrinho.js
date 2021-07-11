@@ -1,9 +1,12 @@
-﻿class Carrinho {
+﻿const { cwd } = require("process");
+
+class Carrinho {
     clickIncremento(button) {
         let data = this.getData(button);
         data.Quantidade++;
         this.postQuantidade(data);
     }
+    
 
     clickDecremento(button) {
         let data = this.getData(button);
@@ -61,6 +64,7 @@ var carrinho = new Carrinho();
 Number.prototype.duasCasas = function () {
     return this.toFixed(2).replace('.', ',');
 }
+
 
 
 
