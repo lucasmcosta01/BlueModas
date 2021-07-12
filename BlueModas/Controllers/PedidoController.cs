@@ -40,18 +40,28 @@ namespace BlueModas.Controllers
             return base.View(carrinhoViewModel);
         }
 
-       
 
-        public async Task<IActionResult> Cadastro()
+
+        public async Task<IActionResult> Cadastro(string codigo)
         {
-            var pedido = await pedidoRepository.GetPedido();
 
-            if (pedido == null)
+            if (!string.IsNullOrEmpty(codigo))
+            {
+                await pedidoRepository.AddItem(codigo);
+            }
+
+            Pedido pedido = await pedidoRepository.GetPedido();
+            List<ItemPedido> itens = pedido.Itens;
+            CarrinhoViewModel carrinhoViewModel = new CarrinhoViewModel(itens);
+
+            var pedido1 = await pedidoRepository.GetPedido();
+
+            if (pedido1 == null)
             {
                 return RedirectToAction("Carrossel");
             }
 
-            return View(pedido.Cadastro);
+            return View(pedido1.Cadastro);
         }
 
         [HttpPost]

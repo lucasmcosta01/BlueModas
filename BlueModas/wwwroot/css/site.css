@@ -87,14 +87,15 @@ textarea {
 .produto-nome {
 }
 
-h3{
-   color: white;
-}
-
-.container body-content{
+h3 {
     color: white;
 }
 
-footer{
+
+.container body-content {
+    color: white;
+}
+
+footer {
     color: white;
 }

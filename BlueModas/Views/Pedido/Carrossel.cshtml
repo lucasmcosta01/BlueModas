@@ -1,8 +1,6 @@
-
 @{
     ViewData["Title"] = "Home";
 }
-
 @model List<Produto>;
 
 @{ List<Produto> produto2 = new List<Produto>();
@@ -25,11 +23,7 @@
     }
 }
 
-
-
-
 <h3>Moda Feminina</h3>
-
 
 
 <div id="my-carousel" class="carousel slide" data-ride="carousel">
@@ -55,15 +49,19 @@
                         <div class="col-md-3 col-sm-3 col-lg-3">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <img class="img-produto-carrossel" src="/images/produtos/large_@(produto.Codigo).jpg" />
+                                    <img class="img-produto-carrossel"
+                                         src="/images/produtos/large_@(produto.Codigo).jpg" />
                                 </div>
                                 <div class="panel-footer produto-footer">
                                     <div class="produto-nome">@produto.Nome</div>
                                     <div><h4><strong>R$ @produto.Preco</strong></h4></div>
-                                    <div class="text-center">
-                                        <a asp-action="carrinho"
+                                    <div class="text-danger">
+                                        <a asp-action="cadastro"
                                            asp-route-codigo="@produto.Codigo"
                                            class="btn btn-success">Comprar</a>
+                                        <a asp-action="carrinho"
+                                           asp-route-codigo="@produto.Codigo"
+                                           class="btn btn-success">Adicionar Carrinho</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,17 +111,19 @@
                         <div class="col-md-3 col-sm-3 col-lg-3">
                             <div class="panel panel-default">
                                 <div class="panel-body">
-                                    <img class="img-produto-carrossel" src="/images/produtos/large_@(produto3.Codigo).jpg" />
+                                    <img class="img-produto-carrossel"
+                                         src="/images/produtos/large_@(produto3.Codigo).jpg" />
                                 </div>
                                 <div class="panel-footer produto-footer">
                                     <div class="produto-nome">@produto3.Nome</div>
                                     <div><h4><strong>R$ @produto3.Preco</strong></h4></div>
-                                    <div class="text-center">
-                                        <a asp-action="carrinho"
+                                    <div class="text-justify">
+                                        <a asp-action="cadastro"
                                            asp-route-codigo="@produto3.Codigo"
                                            class="btn btn-success">Comprar</a>
-
-
+                                        <a asp-action="carrinho"
+                                           asp-route-codigo="@produto3.Codigo"
+                                           class="btn btn-success">Adicionar Carrinho</a>
                                     </div>
 
                                 </div>
@@ -136,7 +136,6 @@
             </div>
         }
     </div>
-
     <!-- Controls -->
     <a class="left carousel-control" href="#my-carousel1" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

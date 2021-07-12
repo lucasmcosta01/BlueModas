@@ -1,4 +1,4 @@
-
+@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
 @{
     ViewData["Title"] = "Carrinho";
 }
@@ -37,7 +37,8 @@
 
             <div class="row row-center linha-produto" item-id="@item.Id">
                 <div class="col-md-3">
-                    <img class="img-produto-carrinho" src="/images/produtos/large_@(item.Produto.Codigo).jpg" />
+                    <img class="img-produto-carrinho" 
+                         src="/images/produtos/large_@(item.Produto.Codigo).jpg" />
                 </div>
                 <div class="col-md-3">@(item.Produto.Nome)</div>
                 <div class="col-md-2 text-center">R$ @(item.PrecoUnitario)</div>
@@ -68,6 +69,18 @@
             </div>
 
         }
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <a class="btn btn-success" asp-action="carrossel">
+                        Continuar Comprando
+                    </a>
+                    <a class="btn btn-success" asp-action="cadastro">
+                        Preencher Cadastro
+                    </a>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="panel-footer">
@@ -87,18 +100,7 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="pull-right">
-            <a class="btn btn-success" asp-action="carrossel">
-                Adicionar Produtos
-            </a>
-            <a class="btn btn-success" asp-action="cadastro">
-                Preencher Cadastro
-            </a>
-        </div>
-    </div>
-</div>
+
 
 @section Scripts
 {

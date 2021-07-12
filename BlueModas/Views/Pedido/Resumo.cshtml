@@ -1,11 +1,17 @@
+@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
 @model Pedido;
+
+
 <h3>Resumo do Pedido</h3>
 
-<div  class="panel panel-default">
+
+<div class="panel panel-default">
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-12">
-                <h3 style="color:black;">Nº do Pedido: @(Model.Id)</h3>
+            <div class="row row-center">
+                <h3 class="col-md-4" style="color:black;">Nº do Pedido: @(Model.Id)</h3>
+                <div class="col-md-3"></div>
+                <h3 class="pull-left col-md-5" style="color:black;">Obrigado Pela Preferência</h3>
             </div>
         </div>
         <hr />
@@ -18,60 +24,77 @@
             </div>
             <div class="col-md-3">
                 <h3 style="color:black;">Endereço de Entrega</h3>
-                <div>@Model.Cadastro.Endereco @Model.Cadastro.Complemento - @Model.Cadastro.Bairro - CEP: @Model.Cadastro.CEP - @Model.Cadastro.Municipio - @Model.Cadastro.UF - Brasil</div>
+                <div>
+                    @Model.Cadastro.Endereco
+                    @Model.Cadastro.Complemento
+                    - @Model.Cadastro.Bairro
+                    - CEP: @Model.Cadastro.CEP
+                    - @Model.Cadastro.Municipio
+                    - @Model.Cadastro.UF
+                    - Brasil
+                </div>
             </div>
             <div class="col-md-1">
                 <h3 style="color:black;"></h3>
             </div>
             <div class="col-md-5">
-                <h3 class="pull-left" style="color:black;">Obrigado Pela Preferência</h3>
                 <div>
-                    <video class="pull-left" src="@Url.Content("~/images/logoBlue.mp4")" controls autoplay width="300" height="200" loop />
-
-
+                    <video class="pull-left" src="@Url.Content("~/images/logoBlue.mp4")"
+                           controls autoplay width="300" height="200" loop />
                 </div>
             </div>
         </div>
         <hr />
-        <div class="row">
-            <div class="col-md-1">
-                <h3 style="color:black;"></h3>
+        <div class="row row-center">
+            <div class="col-md-2 text-right">
+                <h3 style="color:black;">BlueModas</h3>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4 text-center">
                 <h3 style="color:black;">Item</h3>
             </div>
-            <div class="col-md-4">
-                <h3 style="color:black;">Preço</h3>
+            <div class="col-md-3 text-center">
+                <h3 style="color:black;">Preço Unitário</h3>
             </div>
-            <div class="col-md-pull-10">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
                 <h3 style="color:black;">Quantidade</h3>
             </div>
         </div>
 
         @foreach (var item in Model.Itens)
         {
+            
 
-
-            <div class="row">
-                <div class="col-md-1">
-                    <h3 style="color:black;"></h3>
-                </div>
-                <div class="col-md-5">
-                    <img class="img-produto-carrinho" src="/images/produtos/large_@(item.Produto.Codigo).jpg" />
-                    <div>@item.Produto.Nome</div>
+            <div class="row row-center linha-produto">
+                <div class="col-md-3 text-left">
+                    <img class="img-produto-carrinho text-left"
+                         src="/images/produtos/large_@(item.Produto.Codigo).jpg" />
                 </div>
                 <div class="col-md-4">
-                    <div class="col-md-pull-7">@item.PrecoUnitario</div>
+                    <div>@item.Produto.Nome</div>
                 </div>
                 <div class="col-md-1">
-                    <div></div>
+                    <div class="text-center">@item.PrecoUnitario</div>
                 </div>
+                <div class="col-md-3"></div>
                 <div class="col-md-1">
-                    <div class="pull-left">@item.Quantidade</div>
+                    <div class="relative text-center">@item.Quantidade</div>
                 </div>
             </div>
         }
-
+        @{decimal total = 0;
+            foreach (var item in Model.Itens)
+            {
+                total += (item.PrecoUnitario * item.Quantidade);
+            }
+        }
     </div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <a asp-action="carrossel"
+       class="btn btn-success text-right col-md-4">Voltar ao Menu Principal</a>
+    <a class="text-center col-md-4" style="font-size: 20px" >Total:  @(total)</a>
+</div>
 </div>
 

@@ -20,13 +20,33 @@
     </environment>
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
-    
-      
+
+
 
 <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+            <a asp-action="carrinho" class="btn"
+               style="font-size: 40px; color:slategray;
+                font-family:Cambria, Cochin,
+                Georgia, Times, Times New Roman, serif">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Carrinho
+            </a>
+            <a asp-action="cadastro" class="btn"
+               style="font-size: 40px; color:slategray;
+                font-family:Cambria, Cochin,
+                Georgia, Times, Times New Roman, serif">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cadastro
+            </a>
+            <a class="btn" style="font-size: 40px; color:slategray;
+                font-family:Cambria, Cochin,
+                Georgia, Times, Times New Roman, serif"
+               href="javascript:window.close();">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sair
+            </a>
+
+            <text class="navbar-fixed-bottom" style="font-size: 40px">&nbsp;&nbsp;&nbsp;&nbsp;BlueModas </text>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -34,19 +54,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    <a asp-area="" asp-controller="Pedido" asp-action="Carrossel" class="navbar-brand"></a>
-                </div>
-                <div class="navbar-collapse collapse">
-                </div>
+                <a asp-area="" asp-controller="Pedido" asp-action="Carrossel" class="navbar-brand"></a>
+
             </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
     </nav>
+
+
+
+
+
+
 
 
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2021 - Blue Modas</p>
+            <p>&copy; 2021 - Blue Modas -  A persistência é o caminho do êxito - Charles Chaplin </p>
         </footer>
     </div>
 
